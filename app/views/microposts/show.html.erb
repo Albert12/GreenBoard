@@ -1,0 +1,16 @@
+<h1>GreenBoard</h1>
+
+<table>
+  <tr>
+    <th>ID</th>
+    <th>Content</th>
+    <th>Time</th>
+  </tr>
+  <tr>
+    <td><%= @micropost.id %></td>
+    <td><%= @micropost.content %></td>
+    <td><%= @micropost.created_at.to_s.split(' UTC')[0] %></td>
+  </tr>
+</table>
+
+<%= link_to 'Back', microposts_path %>
