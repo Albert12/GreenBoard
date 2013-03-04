@@ -1,0 +1,14 @@
+<h1>GreenBoard</h1>
+
+  <div class="id common">ID</div>
+  <div class="cont common">Content</div>
+  <div class="time common">Time</div>
+  <br><br>
+
+  <div class="id common"><%= @advert.id %></div>
+  <div class="cont common"><%= @advert.content %></div>
+  <div class="time common"><%= @advert.created_at.strftime("%d/%m/%Y %H:%M") %></div>
+
+  <br><br>
+
+<%= link_to 'Back', adverts_path %>

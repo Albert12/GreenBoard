@@ -1,5 +1,7 @@
 доска объявлений GreenBoard
 
+Задание 1
+
 объявление имеет:
 - номер
 - дату
@@ -18,8 +20,25 @@
 - заглавная, со всеми объявлениями
 - отдельные страницы для каждого объявления
 
-Скриншоты результата:
+Задание 2
 
-show_all_records.png
-show_one_record.png
-create_new_record.png
+1) добавь меня в проект - https://github.com/Albert12/GreenBoard/settings/collaboration
+2) причеши страницу с объявлениями, вместо таблицы используй блоки, примерная структура
+<div class="adverts">
+<div class="advert">
+<div class="time">{{TIME}}</div>
+<p class="content">{{BODY}}</div>
+<div class="actions">{{ACTION LINKS}}</div>
+</div>
+
+<div class="advert">
+<div class="time">{{TIME}}</div>
+<p class="content">{{BODY}}</div>
+<div class="actions">{{ACTION LINKS}}</div>
+</div>
+
+...
+</div>
+3) Сделай валидацию, чтоб проверялось что текст присутствует
+4) поменяй вывод времени: вместо 2013-03-04 07:34:20 хочу видеть 04/03/2013 07:34
+все это справедливо и для show страницы

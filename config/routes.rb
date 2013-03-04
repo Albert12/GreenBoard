@@ -1,8 +1,7 @@
 GreenBoard::Application.routes.draw do
   
-  root :to => 'microposts#index'
-  resources :microposts
-
+  root :to => 'adverts#index'
+  resources :adverts, :only => [:index, :show, :new, :create, :destroy]
 
 
   # The priority is based upon order of creation:
