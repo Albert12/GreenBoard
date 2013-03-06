@@ -3,21 +3,28 @@
   vertical-align:top;
   margin-right: 20px
 }
-.id { 
- width: 50px; 
- background: #ffff00;
+
+body {
+  width:600px;
+  margin: 0 auto;
 }
 
-.cont { 
- width: 200px;
- background: #ffa500;
-
+.advert {
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px 0;
+  border-bottom: 1px solid #555;
 }
-.time { 
- width: 150px; 
+
+.advert .time {
  background: #00ffff;
 }
-.actions { 
- width: 50px; 
- background: #c0c0c0;
+
+.advert p.content{
+  font-family: Arial;
+}
+
+.advert .actions{
+  width: 100%;
+  text-align: right;
 }

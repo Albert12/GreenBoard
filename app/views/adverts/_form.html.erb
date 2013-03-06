@@ -1,8 +1,13 @@
 <%= form_for(@advert) do |f| %>
-
+  <div class="errors">
+    <ul>
+      <% @advert.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ul>
   <div>
     <%= f.label :content %><br />
-    <%= f.text_field :content %>
+    <%= f.text_area :content %>
   </div>
   <div>
     <%= f.submit %>

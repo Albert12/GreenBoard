@@ -19,10 +19,4 @@ ActiveRecord::Schema.define(:version => 20130304102025) do
     t.datetime "updated_at", :null => false
   end
 
-  create_table "microposts", :force => true do |t|
-    t.string   "content"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
-
 end
