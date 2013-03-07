@@ -1,23 +1,48 @@
 .common {
   display: inline-block;
   vertical-align:top;
-  margin-right: 20px
-}
-.id { 
- width: 50px; 
- background: #ffff00;
 }
 
-.cont { 
- width: 200px;
- background: #ffa500;
-
+body {
+  width: 640px;
+  margin: 0 auto;
+  text-align: center;
 }
-.time { 
- width: 150px; 
+
+.advert {
+  display: inline-block;
+  vertical-align:top;
+  width: 400px;
+  margin: 10px 0;
+  padding: 10px 0;
+  text-align: left;
+}
+
+.advert .time {
  background: #00ffff;
+ text-align: right
 }
-.actions { 
- width: 50px; 
- background: #c0c0c0;
+
+.advert p.content{
+  font-family: Arial;
+}
+
+.advert .actions {
+  width: 100%;
+  text-align: right;
+}
+
+.id {
+float: left;
+}
+
+.contacts {
+width: 200px;
+text-align: left;
+margin-left: 20px;
+border-left: 1px solid black;
+}
+
+.adverts {
+background-color: #D3D3D3
 }
