@@ -1,27 +1,11 @@
-.common {
-  display: inline-block;
-  vertical-align:top;
-<<<<<<< HEAD
-  margin-right: 20px
-}
-
-body {
-  width:600px;
-  margin: 0 auto;
-}
-
-.advert {
-  width: 100%;
-  margin: 10px 0;
-  padding: 10px 0;
-  border-bottom: 1px solid #555;
-=======
-}
-
 body {
   width: 640px;
   margin: 0 auto;
   text-align: center;
+}
+
+.adverts {
+background-color: #D3D3D3
 }
 
 .advert {
@@ -31,9 +15,20 @@ body {
   margin: 10px 0;
   padding: 10px 0;
   text-align: left;
->>>>>>> t3_br1
 }
 
+.advbottom {
+  display: inline-block;
+  vertical-align:top;
+  width: 400px;
+  margin-left: 20px;
+  text-align: left;
+}
+
+
+.advert .id {
+float: left;
+}
 .advert .time {
  background: #00ffff;
  text-align: right
@@ -41,32 +36,21 @@ body {
 
 .advert p.content{
   font-family: Arial;
-<<<<<<< HEAD
-}
-
-.advert .actions{
-  width: 100%;
-  text-align: right;
-=======
->>>>>>> t3_br1
-}
-
-.advert .actions {
-  width: 100%;
-  text-align: right;
-}
-
-.id {
-float: left;
 }
 
 .contacts {
 width: 200px;
-text-align: left;
-margin-left: 20px;
 border-left: 1px solid black;
 }
 
-.adverts {
-background-color: #D3D3D3
+.category {
+float: left;
+}
+
+.actions {
+  text-align: right;
+}
+
+.advbottomleft {
+  text-align: left
 }

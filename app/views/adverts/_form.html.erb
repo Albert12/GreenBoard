@@ -1,8 +1,5 @@
 <%= form_for(@advert) do |f| %>
-<<<<<<< HEAD
-=======
 
->>>>>>> t3_br1
   <div class="errors">
     <ul>
       <% @advert.errors.full_messages.each do |msg| %>
@@ -10,11 +7,6 @@
       <% end %>
     </ul>
   <div>
-<<<<<<< HEAD
-    <%= f.label :content %><br />
-    <%= f.text_area :content %>
-  </div>
-=======
 
   <div>
     <div>
@@ -35,8 +27,10 @@
       <br/>
       <%= f.label :icq, "ICQ" %><br/>
       <%= f.text_field :icq %>
+      <br/>
+      <%= f.label :category_id, "Категория" %><br/>
+      <%= f.collection_select(:category_id, Category.all, :id, :name, :include_blank => "Выберите категорию") %>
     </div>
->>>>>>> t3_br1
   <div>
     <%= f.submit %>
   </div>

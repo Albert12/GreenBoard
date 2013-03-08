@@ -2,7 +2,7 @@ class AdvertsController < ApplicationController
   # GET /adverts
   # GET /adverts.json
   def index
-    @adverts = Advert.order('created_at desc').all
+    @adverts = Advert.includes(:category).order('created_at desc').all
 
     respond_to do |format|
       format.html # index.html.erb
@@ -25,7 +25,7 @@ class AdvertsController < ApplicationController
   # GET /adverts/new.json
   def new
     @advert = Advert.new
-
+    
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @advert }
