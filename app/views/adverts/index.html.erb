@@ -1,5 +1,6 @@
 <h1>GreenBoard</h1>
 
+<<<<<<< HEAD
 <div class="adverts">
   <% @adverts.each do |advert| %>
     <div class="advert">
@@ -13,3 +14,37 @@
   <% end %>
 </div>
 <%= link_to 'New Advert', new_advert_path %>
+=======
+
+
+  <% @adverts.each do |advert| %>
+
+  <div class="adverts">
+    <div class="advert">
+      <div class="id">No: <%= advert.id %></div>
+      <div class="time"><%= advert.created_at.strftime("%d/%m/%Y %H:%M") %></div>
+      <p class="content"><%= advert.content %></p>
+    </div>
+
+    <div class="advert contacts">
+      <div><b>Contacts</b></div>
+      <div>Name: <%= advert.name %></div>
+      <div>Phone: <%= advert.phone %></div>
+      <div>Skype: <%= advert.skype %></div>
+      <div>Email: <%= advert.email %></div>
+      <div>ICQ: <%= advert.icq %></div>
+    </div>
+
+    <div class="actions">
+      <%= link_to 'Show', advert %>&nbsp;|&nbsp;
+      <%= link_to 'Destroy', advert, method: :delete, data: { confirm: 'Are you sure?' } %>
+    </div>
+  </div>
+  <br>
+  <% end %>
+
+
+
+
+<%= link_to 'New Advert', new_advert_path %>
+>>>>>>> t3_br1

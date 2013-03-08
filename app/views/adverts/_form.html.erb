@@ -1,4 +1,8 @@
 <%= form_for(@advert) do |f| %>
+<<<<<<< HEAD
+=======
+
+>>>>>>> t3_br1
   <div class="errors">
     <ul>
       <% @advert.errors.full_messages.each do |msg| %>
@@ -6,9 +10,33 @@
       <% end %>
     </ul>
   <div>
+<<<<<<< HEAD
     <%= f.label :content %><br />
     <%= f.text_area :content %>
   </div>
+=======
+
+  <div>
+    <div>
+      <%= f.label :content %><br/>
+      <%= f.text_area :content %>
+      <br/>
+      <%= f.label :name %><br/>
+      <%= f.text_field :name %>
+      <br/>
+      <%= f.label :phone %><br/>
+      <%= f.text_field :phone %>
+      <br/>
+      <%= f.label :skype %><br/>
+      <%= f.text_field :skype %>
+      <br/>
+      <%= f.label :email %><br/>
+      <%= f.text_field :email %>
+      <br/>
+      <%= f.label :icq, "ICQ" %><br/>
+      <%= f.text_field :icq %>
+    </div>
+>>>>>>> t3_br1
   <div>
     <%= f.submit %>
   </div>

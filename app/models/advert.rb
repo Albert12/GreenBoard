@@ -6,6 +6,9 @@
 #
 
 class Advert < ActiveRecord::Base
-  attr_accessible :content, :created_at, :id
+  attr_accessible :content, :id, :email, :phone, :icq, :skype, :name
   validates :content, presence: true
+  VALID_PHONE_REGEX = /\d/
+  validates :phone, presence: true, length: { minimum: 7, maximum: 11 },
+  					format: { with: VALID_PHONE_REGEX }
 end
