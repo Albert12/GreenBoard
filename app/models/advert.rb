@@ -13,5 +13,3 @@ class Advert < ActiveRecord::Base
   					format: { with: VALID_PHONE_REGEX }
   belongs_to :category
 end
-
-# длину проверял не через regex чтобы было сообщение о допустимой длине в случае ошибки
