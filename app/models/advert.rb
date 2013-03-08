@@ -12,5 +12,3 @@ class Advert < ActiveRecord::Base
   validates :phone, presence: true, length: { minimum: 7, maximum: 11 },
   					format: { with: VALID_PHONE_REGEX }
 end
-
-# длину проверял не через regex чтобы было сообщение о допустимой длине в случае ошибки
