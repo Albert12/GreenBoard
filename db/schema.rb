@@ -11,21 +11,22 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130307085349) do
+ActiveRecord::Schema.define(:version => 20130307193621) do
 
   create_table "adverts", :force => true do |t|
     t.string   "content"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
     t.string   "email"
     t.string   "phone"
     t.string   "icq"
     t.string   "skype"
     t.string   "name"
+    t.integer  "category_id"
   end
 
-  create_table "microposts", :force => true do |t|
-    t.string   "content"
+  create_table "categories", :force => true do |t|
+    t.string   "name"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end

@@ -1,12 +1,11 @@
-.common {
-  display: inline-block;
-  vertical-align:top;
-}
-
 body {
   width: 640px;
   margin: 0 auto;
   text-align: center;
+}
+
+.adverts {
+background-color: #D3D3D3
 }
 
 .advert {
@@ -18,6 +17,18 @@ body {
   text-align: left;
 }
 
+.advbottom {
+  display: inline-block;
+  vertical-align:top;
+  width: 400px;
+  margin-left: 20px;
+  text-align: left;
+}
+
+
+.advert .id {
+float: left;
+}
 .advert .time {
  background: #00ffff;
  text-align: right
@@ -27,22 +38,19 @@ body {
   font-family: Arial;
 }
 
-.advert .actions {
-  width: 100%;
-  text-align: right;
-}
-
-.id {
-float: left;
-}
-
 .contacts {
 width: 200px;
-text-align: left;
-margin-left: 20px;
 border-left: 1px solid black;
 }
 
-.adverts {
-background-color: #D3D3D3
+.category {
+float: left;
+}
+
+.actions {
+  text-align: right;
+}
+
+.advbottomleft {
+  text-align: left
 }

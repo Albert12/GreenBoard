@@ -1,6 +1,7 @@
 <h1>GreenBoard</h1>
 
   <div class="adverts">
+
     <div class="advert">
       <div class="id">No: <%= @advert.id %></div>
       <div class="time"><%= @advert.created_at.strftime("%d/%m/%Y %H:%M") %></div>
@@ -15,7 +16,15 @@
       <div>Email: <%= @advert.email %></div>
       <div>ICQ: <%= @advert.icq %></div>
     </div>
-
+    
+    <div class="advbottomleft">
+    <div class="advbottom">
+      <div class="category">Категория: <%= Category.find(@advert.category_id).name %></div>
+      <div class="actions"> 
       <%= link_to 'Back', adverts_path %>&nbsp;|&nbsp;
       <%= link_to 'Destroy', @advert, method: :delete, data: { confirm: 'Are you sure?' } %>
+      </div>
     </div>
+    </div>
+
+  </div>

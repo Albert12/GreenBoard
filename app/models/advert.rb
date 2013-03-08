@@ -6,11 +6,12 @@
 #
 
 class Advert < ActiveRecord::Base
-  attr_accessible :content, :id, :email, :phone, :icq, :skype, :name
+  attr_accessible :content, :id, :email, :phone, :icq, :skype, :name, :category_id
   validates :content, presence: true
   VALID_PHONE_REGEX = /\d/
   validates :phone, presence: true, length: { minimum: 7, maximum: 11 },
   					format: { with: VALID_PHONE_REGEX }
+  belongs_to :category
 end
 
 # длину проверял не через regex чтобы было сообщение о допустимой длине в случае ошибки

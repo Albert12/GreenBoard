@@ -3,8 +3,8 @@
 
 
   <% @adverts.each do |advert| %>
-
   <div class="adverts">
+
     <div class="advert">
       <div class="id">No: <%= advert.id %></div>
       <div class="time"><%= advert.created_at.strftime("%d/%m/%Y %H:%M") %></div>
@@ -19,16 +19,19 @@
       <div>Email: <%= advert.email %></div>
       <div>ICQ: <%= advert.icq %></div>
     </div>
-
-    <div class="actions">
+    
+    <div class="advbottomleft">
+    <div class="advbottom">
+      <div class="category">Категория: <%= Category.find(advert.category_id).name %></div>
+      <div class="actions"> 
       <%= link_to 'Show', advert %>&nbsp;|&nbsp;
       <%= link_to 'Destroy', advert, method: :delete, data: { confirm: 'Are you sure?' } %>
+      </div>
     </div>
+    </div>
+
   </div>
   <br>
   <% end %>
-
-
-
 
 <%= link_to 'New Advert', new_advert_path %>

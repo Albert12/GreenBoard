@@ -27,6 +27,9 @@
       <br/>
       <%= f.label :icq, "ICQ" %><br/>
       <%= f.text_field :icq %>
+      <br/>
+      <%= f.label :category_id, "Категория" %><br/>
+      <%= f.collection_select(:category_id, Category.all, :id, :name, :include_blank => "Выберите категорию") %>
     </div>
   <div>
     <%= f.submit %>
