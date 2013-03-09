@@ -29,7 +29,18 @@
       <%= f.text_field :icq %>
       <br/>
       <%= f.label :category_id, "Категория" %><br/>
-      <%= f.collection_select(:category_id, Category.all, :id, :name, :include_blank => "Выберите категорию") %>
+      <%=
+      newcoll = []
+      coll = Category.all
+      coll.each{|x|
+        parent = x.parentcategory
+        if parent != nil
+        x[:name] = parent.name + "\\" + x.name
+        newcoll << x
+        end
+      }
+      f.collection_select(:category_id, newcoll, :id, :name, :include_blank => "Выберите категорию")
+      %>
     </div>
   <div>
     <%= f.submit %>
