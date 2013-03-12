@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130309110755) do
+ActiveRecord::Schema.define(:version => 20130312181125) do
 
   create_table "adverts", :force => true do |t|
     t.string   "content"
@@ -30,6 +30,13 @@ ActiveRecord::Schema.define(:version => 20130309110755) do
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
     t.integer  "category_id"
+  end
+
+  create_table "views_counters", :force => true do |t|
+    t.string   "view"
+    t.integer  "vcount"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
 end
