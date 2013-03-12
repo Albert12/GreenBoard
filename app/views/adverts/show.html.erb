@@ -19,7 +19,7 @@
     
     <div class="advbottomleft">
     <div class="advbottom">
-      <div class="category">Категория: <%= Category.find(@advert.category_id).name %></div>
+      <div class="category"><%= @advert.category.parentcategory.name + "\\" + @advert.category.name %></div>
       <div class="actions"> 
       <%= link_to 'Back', adverts_path %>&nbsp;|&nbsp;
       <%= link_to 'Destroy', @advert, method: :delete, data: { confirm: 'Are you sure?' } %>
@@ -28,3 +28,5 @@
     </div>
 
   </div>
+
+<div class="viewscounter">Views: <%= @vcounter %></div>
