@@ -1,7 +1,12 @@
 body {
-  width: 640px;
+  width: 840px;
   margin: 0 auto;
   text-align: center;
+  background-color: #C0C0C0
+}
+
+h1 {
+  color: #00FF00
 }
 
 .adverts {
@@ -11,7 +16,7 @@ background-color: #D3D3D3
 .advert {
   display: inline-block;
   vertical-align:top;
-  width: 400px;
+  width: 600px;
   margin: 10px 0;
   padding: 10px 0;
   text-align: left;
@@ -20,7 +25,7 @@ background-color: #D3D3D3
 .advbottom {
   display: inline-block;
   vertical-align:top;
-  width: 400px;
+  width: 600px;
   margin-left: 20px;
   text-align: left;
 }
@@ -30,7 +35,7 @@ background-color: #D3D3D3
 float: left;
 }
 .advert .time {
- background: #00ffff;
+ background: #AFEEEE;
  text-align: right
 }
 
@@ -45,6 +50,7 @@ border-left: 1px solid black;
 
 .category {
 float: left;
+font-size: 10pt
 }
 
 .actions {
@@ -53,4 +59,8 @@ float: left;
 
 .advbottomleft {
   text-align: left
+}
+
+.viewscounter{
+  color: red
 }
