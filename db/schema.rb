@@ -66,10 +66,11 @@ ActiveRecord::Schema.define(:version => 20130313212652) do
   end
 
   create_table "views_counters", :force => true do |t|
-    t.string   "view"
-    t.integer  "vcount"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.string   "viewable_type"
+    t.string   "viewable_id"
+    t.integer  "views_count"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
   end
 
 end

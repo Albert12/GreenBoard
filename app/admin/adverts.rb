@@ -1,6 +1,13 @@
 ActiveAdmin.register Advert do
 
-	filter :category, as: :select, collection: Category.allcategories
+	filter :category, as: :select, collection: proc {
+    collection = []
+    Category.all.each{ |x|
+      x[:name] = x.parentcategory.name + " / " + x.name if x.parentcategory.present?
+      collection << x
+    }
+    collection
+  }
 	filter :content, as: :string
 	filter :created_at, as: :date_range
 	filter :updated_at, as: :date_range
@@ -22,7 +29,7 @@ ActiveAdmin.register Advert do
         row :email
         row :icq
         row :category do |advert|
-        	advert.category.parentcategory.name + "\\" + advert.category.name
+        	advert.category.title
         end
       end
       active_admin_comments
@@ -41,30 +48,11 @@ ActiveAdmin.register Advert do
       		div do 'ICQ: ' + advert.icq end
       	end
       	column "Category", sortable: :category_id do |advert|
-      	advert.category.parentcategory.name + "\\" + advert.category.name
+      	advert.category.title
       	end
-
       	default_actions
     end
 
-    form do |f|
+    form :partial => "form"
 
-		f.inputs "Contacts" do
-			f.input :name
-			f.input :phone
-			f.input :skype
-			f.input :email
-			f.input :icq
-		end
-
-		f.inputs "Категория" do
-			f.input :category, as: :select, collection: Category.allcategories, include_blank: "Выберите категорию"
-		end
-
-		f.inputs "Content" do
-		    f.input :content
-		end
-
-		f.buttons
-	end
 end

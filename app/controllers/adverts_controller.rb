@@ -3,7 +3,7 @@ class AdvertsController < ApplicationController
   # GET /adverts.json
   def index
     @adverts = Advert.includes(:category).order('created_at desc').all
-    @vcounter = ViewsCounter.counter('index')
+    @vcounter = ViewsCounter.counter('Page', 'index')
 
     respond_to do |format|
       format.html # index.html.erb
@@ -15,7 +15,7 @@ class AdvertsController < ApplicationController
   # GET /adverts/1.json
   def show
     @advert = Advert.find(params[:id])
-    @vcounter = ViewsCounter.counter(params[:id])
+    @vcounter = ViewsCounter.counter('Advert', params[:id])
     
     respond_to do |format|
       format.html # show.html.erb
