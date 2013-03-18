@@ -1,13 +1,6 @@
 ActiveAdmin.register Advert do
 
-	filter :category, as: :select, collection: proc {
-    collection = []
-    Category.all.each{ |x|
-      x[:name] = x.parentcategory.name + " / " + x.name if x.parentcategory.present?
-      collection << x
-    }
-    collection
-  }
+	filter :category, as: :select, collection: Category.allcategories
 	filter :content, as: :string
 	filter :created_at, as: :date_range
 	filter :updated_at, as: :date_range
@@ -53,6 +46,25 @@ ActiveAdmin.register Advert do
       	default_actions
     end
 
-    form :partial => "form"
+    form do |f|
+
+        f.inputs "Contacts" do
+          f.input :name
+          f.input :phone
+          f.input :skype
+          f.input :email
+          f.input :icq
+        end
+
+        f.inputs "Категория" do
+          f.input :category, as: :select, collection: Category.allcategories, include_blank: "Выберите категорию"
+        end
+
+        f.inputs "Content" do
+            f.input :content
+        end
+
+        f.buttons
+      end
 
 end

@@ -14,5 +14,14 @@ end
 def title
   (ancestors + [self]).map(&:name).join(' / ')
 end
+
+def self.allcategories
+collection = []
+    all.each{ |x|
+      x[:name] = x.parentcategory.name + " / " + x.name if x.parentcategory.present?
+      collection << x
+    }
+    collection
+ end
   
 end
