@@ -3,11 +3,11 @@ class Category < ActiveRecord::Base
   has_many :adverts
 
   has_many :subcategories, class_name: "Category", foreign_key: "category_id"
-  belongs_to :parentcategory, class_name: "Category", foreign_key: "category_id"
+  belongs_to :parent, class_name: "Category", foreign_key: "category_id"
 
 def ancestors
   result = []
-  result << parentcategory if parentcategory.present?
+  result << parent if parent.present?
   result
 end
 
@@ -18,7 +18,7 @@ end
 def self.allcategories
 collection = []
     all.each{ |x|
-      x[:name] = x.parentcategory.name + " / " + x.name if x.parentcategory.present?
+      x[:name] = x.parent.name + " / " + x.name if x.parent.present?
       collection << x
     }
     collection
