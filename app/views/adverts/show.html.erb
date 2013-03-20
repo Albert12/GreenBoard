@@ -1,30 +1,42 @@
-<h1>GreenBoard</h1>
+<h1 class="text-center">GreenBoard</h1>
 
-  <div class="adverts">
+  <div class="container">
+    <div class="row adv_backgr_color">
 
-    <div class="advert">
-      <div class="id">No: <%= @advert.id %></div>
-      <div class="time"><%= @advert.created_at.strftime("%d/%m/%Y %H:%M") %></div>
-      <p class="content"><%= @advert.content %></p>
-    </div>
-
-    <div class="advert contacts">
-      <div><b>Contacts</b></div>
-      <div>Name: <%= @advert.name %></div>
-      <div>Phone: <%= @advert.phone %></div>
-      <div>Skype: <%= @advert.skype %></div>
-      <div>Email: <%= @advert.email %></div>
-      <div>ICQ: <%= @advert.icq %></div>
-    </div>
-    
-    <div class="advbottomleft">
-    <div class="advbottom">
-      <div class="category">Категория: <%= Category.find(@advert.category_id).name %></div>
-      <div class="actions"> 
-      <%= link_to 'Back', adverts_path %>&nbsp;|&nbsp;
-      <%= link_to 'Destroy', @advert, method: :delete, data: { confirm: 'Are you sure?' } %>
+      <div class="span9">
+        <div class="row">
+          <div class="span6 text-left">No: <%= @advert.id %></div>
+          <div class="span3 text-right"><%= @advert.created_at.strftime("%d/%m/%Y %H:%M") %></div>
+        </div>
+      <br>
+      <%= @advert.content %>
       </div>
-    </div>
-    </div>
+
+      <div class="span3">
+        <ul class="unstyled">
+          <li><b>Contacts</b></li>
+          <li>Name: <%= @advert.name %></li>
+          <li>Phone: <%= @advert.phone %></li>
+          <li>Skype: <%= @advert.skype %></li>
+          <li>Email: <%= @advert.email %></li>
+          <li>ICQ: <%= @advert.icq %></li>
+        </ul>
+      </div>
+
+      <div class="span9">
+        <div class="row">
+          <div class="span6 text-left"><%= @advert.category.title %></div>
+          <div class="span3 text-right">
+            <ul class="inline">
+              <li class="btn"><%= link_to 'Back', adverts_path %></li>
+              <li class="btn"><%= link_to 'Destroy', @advert, method: :delete, data: { confirm: 'Are you sure?' } %></li>
+            </ul>
+          </div>
+        </div>
+      </div>
 
   </div>
+  <br>
+</div>
+
+<div class="span1 offset7 label label-success text-center">Views: <%= @vcounter %></div>
