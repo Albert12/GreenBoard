@@ -1,0 +1,32 @@
+@import "bootstrap";
+
+body {
+  background-color: #C0C0C0;
+}
+
+h1 {
+  color: #00FF00
+}
+
+.adv_backgr_color {
+	background-color: #D3D3D3;
+}
+
+/* forms */
+
+textarea {
+  width: 50%;
+}
+
+.field_with_errors {
+  @extend .control-group.error;
+}
+
+.error_explanation {
+  color: #0000FF;
+  font-weight: bolder;
+  ul {
+    list-style: none;
+    margin: 0 0 18px 0;
+  }
+}

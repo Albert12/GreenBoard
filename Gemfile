@@ -1,11 +1,17 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.12'
-
+gem 'rails'
 
 group :development do
-  gem 'annotate', '2.5.0'
-  gem 'sqlite3', '1.3.5'
+  gem 'annotate'
+  gem 'sqlite3'
 end
 
-gem 'jquery-rails', '2.0.2'
+gem 'jquery-rails'
+gem 'activeadmin'
+gem 'sass-rails'
+gem "meta_search",    '>= 1.1.0.pre'
+gem 'coffee-rails'
+gem 'execjs'
+gem 'therubyracer'
+gem 'bootstrap-sass'
