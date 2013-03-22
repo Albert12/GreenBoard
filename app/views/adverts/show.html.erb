@@ -5,8 +5,8 @@
 
       <div class="span9">
         <div class="row">
-          <div class="span6 text-left">No: <%= @advert.id %></div>
-          <div class="span3 text-right"><%= @advert.created_at.strftime("%d/%m/%Y %H:%M") %></div>
+          <div class="span6 text-left blue_text">No: <%= @advert.id %></div>
+          <div class="span3 text-right blue_text"><%= @advert.created_at.strftime("%d/%m/%Y %H:%M") %></div>
         </div>
       <br>
       <%= @advert.content %>
@@ -22,10 +22,14 @@
           <li>ICQ: <%= @advert.icq %></li>
         </ul>
       </div>
+    </div>
+  </div>
 
+  <div class="container">
+    <div class="row adv_backgr_color">
       <div class="span9">
         <div class="row">
-          <div class="span6 text-left"><%= @advert.category.title %></div>
+          <div class="span6 text-left blue_text"><br><%= @advert.category.title %></div>
           <div class="span3 text-right">
             <ul class="inline">
               <li class="btn"><%= link_to 'Back', adverts_path %></li>
@@ -34,9 +38,7 @@
           </div>
         </div>
       </div>
-
+    </div>
   </div>
   <br>
-</div>
-
 <div class="span1 offset7 label label-success text-center">Views: <%= @vcounter %></div>
