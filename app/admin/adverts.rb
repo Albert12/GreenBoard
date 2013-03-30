@@ -1,3 +1,4 @@
+# encoding: utf-8
 ActiveAdmin.register Advert do
 
 	filter :category, as: :select, collection: Category.allcategories
