@@ -10,6 +10,14 @@
         </div>
       <br>
       <%= @advert.content %>
+      <br><br>
+      <% unless @advert.price.nil? || @advert.price == 0%>
+      <div>Price, RUR: <%= number_with_delimiter(@advert.price, delimiter: " ") %></div>
+      <% end %>
+      <% unless @advert.original_ad_url.nil? %>
+      <div><%= link_to 'Original ad', @advert.original_ad_url %></div>
+      <% end %>
+
       </div>
 
       <div class="span3">
